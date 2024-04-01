@@ -2,36 +2,29 @@ import React from "react"
 
 
  const Contact = () => {
+    const handlesubmit= () =>{
+        alert("Submitted succesfully");
+    }
     return (
+        <>
+        
         <div className="relative flex flex-col justify-center min-h-screen overflow-hidden">
             <div className="w-full p-6 m-auto bg-white rounded-md shadow-xl shadow-rose-600/40 ring-2 ring-indigo-600 lg:max-w-xl">
                 <h1 className="text-3xl font-semibold text-center text-indigo-700 underline uppercase decoration-wavy">
-                    Sign UP
+                    Enrollment Form
                 </h1>
-                <form className="mt-6">
+                <form className="mt-6" onSubmit={handlesubmit}>
                     <div className="mb-2">
                         <label
-                            for="email"
+                            for="text"
                             className="block text-sm font-semibold text-gray-800"
                         >
-                            Firstname
+                            Full Name
                         </label>
                         <input
-                            type="email"
+                            type="text"
                             className="block w-full px-4 py-2 mt-2 text-indigo-700 bg-white border rounded-md focus:border-indigo-400 focus:ring-indigo-300 focus:outline-none focus:ring focus:ring-opacity-40"
-                        />
-                    </div>
-                    <div className="mb-2">
-                        <label
-                            for="email"
-                            className="block text-sm font-semibold text-gray-800"
-                        >
-                            Lastname
-                        </label>
-                        <input
-                            type="email"
-                            className="block w-full px-4 py-2 mt-2 text-indigo-700 bg-white border rounded-md focus:border-indigo-400 focus:ring-indigo-300 focus:outline-none focus:ring focus:ring-opacity-40"
-                        />
+                        required/>
                     </div>
                     <div className="mb-2">
                         <label
@@ -43,28 +36,40 @@ import React from "react"
                         <input
                             type="email"
                             className="block w-full px-4 py-2 mt-2 text-indigo-700 bg-white border rounded-md focus:border-indigo-400 focus:ring-indigo-300 focus:outline-none focus:ring focus:ring-opacity-40"
-                        />
+                        required/>
                     </div>
                     <div className="mb-2">
                         <label
-                            for="password"
+                            for="contact"
                             className="block text-sm font-semibold text-gray-800"
                         >
-                            Password
+                            Contact
                         </label>
                         <input
-                            type="password"
+                            type="number"
                             className="block w-full px-4 py-2 mt-2 text-indigo-700 bg-white border rounded-md focus:border-indigo-400 focus:ring-indigo-300 focus:outline-none focus:ring focus:ring-opacity-40"
-                        />
+                        required/>
+                    </div>
+                    <div className="mb-2">
+                        <label
+                            for="course"
+                            className="block text-sm font-semibold text-gray-800"
+                        >
+                            Course
+                        </label>
+                        <input
+                            type="text"
+                            className="block w-full px-4 py-2 mt-2 text-indigo-700 bg-white border rounded-md focus:border-indigo-400 focus:ring-indigo-300 focus:outline-none focus:ring focus:ring-opacity-40"
+                       required />
                     </div>
                     <div className="mt-6">
                         <button className="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-indigo-700 rounded-md hover:bg-indigo-600 focus:outline-none focus:bg-indigo-600">
-                            Login
+                            Submit
                         </button>
                     </div>
                 </form>
 
-                <p className="mt-8 text-xs font-light text-center text-gray-700">
+                {/* <p className="mt-8 text-xs font-light text-center text-gray-700">
                     {" "}
                     Already have an account?{" "}
                     <a
@@ -73,9 +78,10 @@ import React from "react"
                     >
                         Sign in
                     </a>
-                </p>
+                </p> */}
             </div>
         </div>
+        </>
     );
 }
 
